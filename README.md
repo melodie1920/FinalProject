@@ -1,4 +1,4 @@
-# Final Project - Wine Quality Machine Learning Project
+# Final Project - Credit Card Approval Prediction
 Team Members: 
      Stefanee
      Tiffany
