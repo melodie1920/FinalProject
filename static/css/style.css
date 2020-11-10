@@ -1,29 +1,59 @@
-.hero {
-    position: relative;
-    height: 100px;
-    padding: 0;
-    margin: auto;
-    background-image: url("EarthquakePic3.png");
-    background-attachment: fixed;
-    background-position: bottom center;
-    background-size: cover;
-}
-.hero h1 {
-    color: white;
-}
-
-.hero h2 {
-    color: white;
-}
-
-.hero h3 {
-    color: white;
-}
-
-.hero h4 {
-    color: white;
+/* p {
+    font-weight: bold;
 }
 
 p {
-    font-weight: bold;
+    text-align: left;
+} */
+
+.navbar-brand {
+        color: white !important;
+    }
+
+.nav-link {
+        color: white !important;
+    }
+
+h1 {
+        color: purple;
+        text-align: center;
+      }
+      
+h4 {
+        text-align: center;
+      }
+
+#filter-btn {
+    margin: 4px 2px;
 }
+
+#filter-btn-clear {
+    margin: 4px 2px; 
+}
+
+/* .hero {
+    position: relative;
+    height: 300px;
+    padding: 0;
+    margin: auto;
+    background-image: url("MMTSBankBanner.png");
+    background-attachment: fixed;
+    background-position: bottom center;
+    background-size: cover;
+  } */
+
+  .hero h1 {
+    color: white;
+  }
+
+  .hero h2 {
+    color: white;
+  }
+
+  .hero h3 {
+    color: white;
+  }
+  
+  .hero h4 {
+    color: white;
+  }
