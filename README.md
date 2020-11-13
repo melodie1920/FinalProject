@@ -5,7 +5,10 @@ Team Members:
 - Mabel Duran-Sanchez: https://www.linkedin.com/in/mabelduransanchez/
 - Melodie Vines: https://www.linkedin.com/in/melodiestaton/
  
- 
+
+![MMTS Bank](Images/MMTSBankBanner.png)
+
+
 ABOUT OUR PROJECT
 
 We chose to "create" our very own banking institution called MMTS Bank for our final project. Among the many services MMTS Bank provides is access to a credit card.
