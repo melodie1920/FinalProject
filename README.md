@@ -1,9 +1,9 @@
 # Final Project - Credit Card Approval Prediction
 Team Members: 
-     - Stefanee Richardson: https://www.linkedin.com/in/stefanee-richardson-69629061/
-     - Tiffany Teasley: https://www.linkedin.com/in/tiffany-teasley/
-     - Mabel Duran-Sanchez: https://www.linkedin.com/in/mabelduransanchez/
-     - Melodie Vines: https://www.linkedin.com/in/melodiestaton/
+- Stefanee Richardson: https://www.linkedin.com/in/stefanee-richardson-69629061/
+- Tiffany Teasley: https://www.linkedin.com/in/tiffany-teasley/
+- Mabel Duran-Sanchez: https://www.linkedin.com/in/mabelduransanchez/
+- Melodie Vines: https://www.linkedin.com/in/melodiestaton/
  
  
 ABOUT OUR PROJECT
