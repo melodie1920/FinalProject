@@ -27,7 +27,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="about.html">Application</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="data.html">Data</a>
@@ -50,7 +50,7 @@
 
     <div class="wrapper">
 
-        <img src="static/css/MMTSBanner.png" alt="MMTS Bank Logo">
+        <img src="Images/MMTSBankBanner.png" alt="MMTS Bank Logo">
         
     <div class="wrapper">
 
@@ -59,6 +59,8 @@
         <br>
     </div>
 
+    <h3 style="color: teal;"><center>Data Exploration</center></h3>
+
         <div class="container">
             <p>After reviewing several datasets, we came across a dataset often used by other data scientists to do
                 similar
@@ -66,13 +68,133 @@
             <p>Existing client records were utilized to determine which clients should and should not be approved. Then,
                 we utilized this data to determine if a new applicant would be a good candidate for our credit card
                 services.</p>
-            <p>To view the dataset we utilized for this project from <strong><a href="https://www.kaggle.com/"
+            
+
+            <p>The first CSV file imported into our Jupyter Notebook for analysis included prior applicant information ranging 
+                from their gender to their income and employment status to everything in between.</p>
+
+                <div class="card">
+                    <img class="card-img-top" src="Images/DataExploration.png" alt="Data Exploration">
+                    <div class="card-body">
+                    </div>
+                </div>
+                <br>
+
+            <p>To better visualize and explore the existing data, we created several graphs on 
+                the 17 different variables within the CSV file.</p>
+            
+            <p>The second CSV file contained a record per month for each applicant and whether 
+                they had paid their dues on time and if not, how many months they were behind 
+                in paying on their credit card. </p>
+
+                <div class="card">
+                    <img class="card-img-top" src="Images/ApplicantsByGender.png" alt="Applicants By Gender">
+                    <div class="card-body">
+                    </div>
+                </div>
+                <br>
+
+                <div class="card">
+                    <img class="card-img-top" src="Images/MobilePhone.png" alt="Does the Applicant Have a Mobile Phone?">
+                    <div class="card-body">
+                    </div>
+                </div>
+                <br>
+
+                <div class="card">
+                    <img class="card-img-top" src="Images/WorkPhone.png" alt="Does the Applicant Have a Work Phone?">
+                    <div class="card-body">
+                    </div>
+                </div>
+                <br>
+
+            <p>Visualizations also helped us see general trends, for instance, that the data  has more female than
+                    male applicants. There were also three columns total to represent phones: “FLAG_MOBIL,” “FLAG_WORK_PHONE” 
+                    and “FLAG_PHONE”. Since we were unclear as to what “FLAG_PHONE” represented and “FLAG_MOBIL” was a “Yes” 
+                    for all candidates, we decided that these columns were not needed in the model. </p>
+                    
+                    <p>To view the dataset we utilized for this project from <strong><a href="https://www.kaggle.com/"
                         target="_blank">Kaggle</a></strong>, click <strong><a
                         href="https://www.kaggle.com/rikdifos/credit-card-approval-prediction"
                         target="_blank">here</a></strong>.</p>
 
-            <p>NOTE: ADD BRIEF DATA CLEAN UP DESCRIPTION HERE AS WELL AS SOME IMAGES.</p>
+                    <br>
 
+                        <h3 style="color: teal;"><center>Data Cleanup</center></h3>
+
+                        <p>The data cleanup process for the first CSV containing the demographic information of applicants consisted 
+                            of simplifying column header names and transforming large numerical values into more legible numerical values. 
+                            For instance, the “DAYS_EMPLOYED” column was renamed to “EmployeeYears” and values like “-4542” were multiplied 
+                            by -1 and divided by 365 days to get values like “12.443836” which are much easier to understand. For the 
+                            categorical columns we converted them to numerical values.</p>
+
+                            <div class="card">
+                                <img class="card-img-top" src="Images/DataCleanup1.png" alt="Data Cleanup">
+                                <div class="card-body">
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="card">
+                                <img class="card-img-top" src="Images/DataCleanup2.png" alt="Data Cleanup">
+                                <div class="card-body">
+                                </div>
+                            </div>
+                            <br>
+
+                            <p>We also grouped like values into a smaller number of “bins.” For instance, the 
+                                “EmployeeYears” column originally had a wide range of values from -1 (for those 
+                                on their pensions) to 21+ years of experience and we binned these numbers to 
+                                create the following categories in the “EmployeeYearsCategory” column: -1, 0-5, 
+                                6-10, 11-15, 16-20, 21+).</p>
+
+                                <p>With the second CSV file containing credit card payment histories, we developed 
+                                    some conditions to determine whether applications should be approved or are “Good” 
+                                    or if they should be denied or are "Bad."</p>
+
+                                    <div class="card">
+                                        <img class="card-img-top" src="Images/Legend_Conditions.png" alt="Conditions">
+                                        <div class="card-body">
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <p>We added a column to this dataframe titled “Label” which labeled applicants depending 
+                                        on which condition they met. We then merged our dataframe with "Good" and "Bad" labels 
+                                        with our dataframe with demographics on the “ID” column to create one master dataframe. 
+                                        After merging these dataframes we found that the majority of applicants were considered 
+                                        "Good" with approximately 2,000 considered "Bad."</p>
+
+
+
+                                        <div class="card">
+                                            <img class="card-img-top" src="Images/GoodBadApplicant.png" alt="Good/Bad Applicants">
+                                            <div class="card-body">
+                                            </div>
+                                        </div>
+                                        <br>
+
+
+                                        <div class="card">
+                                            <img class="card-img-top" src="Images/GoodBadbyGender.png" alt="Good/Bad Applicants By Gender">
+                                            <div class="card-body">
+                                            </div>
+                                        </div>
+                                        <br>
+
+                                        <div class="card">
+                                            <img class="card-img-top" src="Images/GoodBadbyAge.png" alt="Good/Bad By Age">
+                                            <div class="card-body">
+                                            </div>
+                                        </div>
+                                        <br>
+
+                                        <div class="card">
+                                            <img class="card-img-top" src="Images/GoodBadbyYearsofEmployment.png" alt="Good/Bad By Years of Employment">
+                                            <div class="card-body">
+                                            </div>
+                                        </div>
+                                        <br>
         </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
