@@ -1,10 +1,11 @@
 # Final Project - Credit Card Approval Prediction
 Team Members: 
-     Stefanee Richardson: https://www.linkedin.com/in/stefanee-richardson-69629061/
-     Tiffany Teasley: https://www.linkedin.com/in/tiffany-teasley/
-     Mabel Duran-Sanchez: https://www.linkedin.com/in/mabelduransanchez/
-     Melodie Vines: https://www.linkedin.com/in/melodiestaton/
-     
+     - Stefanee Richardson: https://www.linkedin.com/in/stefanee-richardson-69629061/
+     - Tiffany Teasley: https://www.linkedin.com/in/tiffany-teasley/
+     - Mabel Duran-Sanchez: https://www.linkedin.com/in/mabelduransanchez/
+     - Melodie Vines: https://www.linkedin.com/in/melodiestaton/
+ 
+ 
 ABOUT OUR PROJECT
 
 We chose to "create" our very own banking institution called MMTS Bank for our final project. Among the many services MMTS Bank provides is access to a credit card.
@@ -12,6 +13,7 @@ We chose to "create" our very own banking institution called MMTS Bank for our f
 Given the high volume of credit card applicantions, our team decided to use a ML model to help us more efficiently review the applications. The goal is for our ML model to accurately and efficiently approve/deny credit card applications.
 
 As you navigate through this site, you will see that the Home page consists of our credit card application (feel free to give it a try yoursefl!). The Data page gives some insight into the data we utilized to train our models. The pages under the ML Models navigation dropdown menu show the different models we trained and tested.
+    
     
 DATA EXPLORATION
  
@@ -28,6 +30,7 @@ The second CSV file contained a record per month for each applicant and whether 
 Visualizations also helped us see general trends, for instance, that the data  has more female than male applicants. There were also three columns total to represent phones: “FLAG_MOBIL,” “FLAG_WORK_PHONE” and “FLAG_PHONE”. Since we were unclear as to what “FLAG_PHONE” represented and “FLAG_MOBIL” was a “Yes” for all candidates, we decided that these columns were not needed in the model.
 
 To view the original dataset we utilized for this project from Kaggle, click here: https://www.kaggle.com/rikdifos/credit-card-approval-prediction.
+
 
 DATA CLEANUP
 
@@ -53,11 +56,13 @@ Conditions:
 
 We added a column to this dataframe titled “Label” which labeled applicants depending on which condition they met. We then merged our dataframe with "Good" and "Bad" labels with our dataframe with demographics on the “ID” column to create one master dataframe. After merging these dataframes we found that the majority of applicants were considered "Good" with approximately 2,000 considered "Bad."
 
+
 LOGISTIC REGRESSION MODEL
 
 Logistic regression is a model that can predict a binary outcome. We initially believed this would be the best model for us to determine if an applicant would be a "Good" or bad applicant.
 
 When we modeled the data using logistic regression, all of the test applicants were identified as good. The model did not perform as we had hoped. We later learned that although logistic regression models due indeed provide binary outcomes, they must be of numerical nature. In other words, logistic regression models cannot answer yes or no questions.
+
 
 KNN MODEL
 
