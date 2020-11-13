@@ -28,7 +28,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="about.html">Application</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="data.html">Data</a>
@@ -50,17 +50,62 @@
     <!-- Page Title -->
     <div class="wrapper">
 
-        <img src="static/css/MMTSBanner.png" alt="MMTS Bank Logo">
+        <img src="Images/MMTSBankBanner.png" alt="MMTS Bank Logo">
 
         <div class="wrapper">
             <br>
             <h1>KNN Model</h1>
             <br>
         </div>
-
+\   
         <div class="container">
 
-            <p>NOTE: ADD IMAGES HERE OF KNN AND BRIEF EXPLANATION</p>
+            <p>The KNN model is a clustering model. These models work best for data 
+                which can easily be clustered together. The model creates clusters based on 
+                the center of grouped values and creates “neighborhoods” based on the nearest neighbors’ 
+                values. This model clustered our data based on whether applicants met the conditions to be 
+                considered “Good” or “Bad” applicants.</p>
+
+            <p>We tested the KNN model two times. The first time we tested the KNN model we used all of the 
+                data elements and all of the records. In the data, approximately 90% of the applicants are Good 
+                and 10% of the applicants are deemed Bad. The KNN model did predict some patients as Bad but not very many. 
+            </p>
+
+            <p>The second time we modelled the data we used a recommendation to equal the amount of data being fed into the 
+                model between Good and Bad applicants. We then sent into the model 2000 Good applicants and 2000 Bad applicants. 
+                This time the model did predict more Bad applicants and was closer to the actual Good/Bad applicants. </p>
+
+                <div class="card">
+                    <img class="card-img-top" src="Images/KNN1.png" alt="KNN Model">
+                    <div class="card-body">
+                    </div>
+                </div>
+                <br>
+
+                <div class="card">
+                    <img class="card-img-top" src="Images/KNN2.png" alt="KNN Model">
+                    <div class="card-body">
+                    </div>
+                </div>
+                <br>
+
+                <p>The second time we tested the KNN model we also used all variables but 
+                    fed into the model an equal number of “Good” and “Bad” candidates. This 
+                    worked a lot better and gave more accurate predictions.</p>
+
+                    <div class="card">
+                        <img class="card-img-top" src="Images/KNN3.png" alt="KNN Model">
+                        <div class="card-body">
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="card">
+                        <img class="card-img-top" src="Images/KNN4.png" alt="KNN Model">
+                        <div class="card-body">
+                        </div>
+                    </div>
+                    <br>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
