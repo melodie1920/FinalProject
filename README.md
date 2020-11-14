@@ -7,7 +7,7 @@ Team Members:
 
 Launch the app: https://shrouded-ocean-97702.herokuapp.com/
 
-![MMTS Bank](Images/MMTSBankBanner.png)
+![MMTS Bank](./Images/MMTSBankBanner.png)
 
 
 ABOUT OUR PROJECT
