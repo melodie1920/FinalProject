@@ -7,7 +7,7 @@ Team Members:
 
 Launch the app: https://shrouded-ocean-97702.herokuapp.com/
 
-![MMTS Bank](Static/Images/MMTSBankBanner.png)
+![MMTS Bank](static/Images/MMTSBankBanner.png)
 
 
 ABOUT OUR PROJECT
@@ -27,7 +27,7 @@ Existing client records in CSV format were utilized to determine which clients s
 
 The first CSV file imported into our Jupyter Notebook for analysis included prior applicant information ranging from their gender to their income and employment status to everything in between.
 
-![MMTS Bank](Images/DataExploration.png)
+![MMTS Bank](static/Images/DataExploration.png)
 
 To better visualize and explore the existing data, we created several graphs on the 17 different variables within the CSV file.
 
