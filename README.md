@@ -33,9 +33,9 @@ To better visualize and explore the existing data, we created several graphs on 
 
 The second CSV file contained a record per month for each applicant and whether they had paid their dues on time and if not, how many months they were behind in paying on their credit card. 
 
-![MMTS Bank](Images/ApplicantsByGender.png)
-![MMTS Bank](Images/MobilePhone.png)
-![MMTS Bank](Images/WorkPhone.png)
+![MMTS Bank](static/Images/ApplicantsByGender.png)
+![MMTS Bank](static/Images/MobilePhone.png)
+![MMTS Bank](static/Images/WorkPhone.png)
 
 Visualizations also helped us see general trends, for instance, that the data  has more female than male applicants. There were also three columns total to represent phones: “FLAG_MOBIL,” “FLAG_WORK_PHONE” and “FLAG_PHONE”. Since we were unclear as to what “FLAG_PHONE” represented and “FLAG_MOBIL” was a “Yes” for all candidates, we decided that these columns were not needed in the model.
 
@@ -46,27 +46,27 @@ DATA CLEANUP
 
 The data cleanup process for the first CSV containing the demographic information of applicants consisted of simplifying column header names and transforming large numerical values into more legible numerical values. For instance, the “DAYS_EMPLOYED” column was renamed to “EmployeeYears” and values like “-4542” were multiplied by -1 and divided by 365 days to get values like “12.443836” which are much easier to understand. For the categorical columns we converted them to numerical values.
 
-![MMTS Bank](Images/DataCleanup1.png)
-![MMTS Bank](Images/DataCleanup2.png)
+![MMTS Bank](static/Images/DataCleanup1.png)
+![MMTS Bank](static/Images/DataCleanup2.png)
 
 We also grouped like values into a smaller number of “bins.” For instance, the “EmployeeYears” column originally had a wide range of values from -1 (for those on their pensions) to 21+ years of experience and we binned these numbers to create the following categories in the “EmployeeYearsCategory” column: -1, 0-5, 6-10, 11-15, 16-20, 21+).
 
 With the second CSV file containing credit card payment histories, we developed some conditions to determine whether applications should be approved or are “Good” or if they should be denied or are "Bad."
 
-![MMTS Bank](Images/Legend_Conditions.png)
+![MMTS Bank](static/Images/Legend_Conditions.png)
 
 We added a column to this dataframe titled “Label” which labeled applicants depending on which condition they met. We then merged our dataframe with "Good" and "Bad" labels with our dataframe with demographics on the “ID” column to create one master dataframe. After merging these dataframes we found that the majority of applicants were considered "Good" with approximately 2,000 considered "Bad."
 
-![MMTS Bank](Images/GoodBadApplicant.png)
-![MMTS Bank](Images/GoodBadbyGender.png)
-![MMTS Bank](Images/GoodBadbyAge.png)
-![MMTS Bank](Images/GoodBadbyYearsofEmployment.png)
+![MMTS Bank](static/Images/GoodBadApplicant.png)
+![MMTS Bank](static/Images/GoodBadbyGender.png)
+![MMTS Bank](static/Images/GoodBadbyAge.png)
+![MMTS Bank](static/Images/GoodBadbyYearsofEmployment.png)
 
 LOGISTIC REGRESSION MODEL
 
 Logistic regression is a model that can predict a binary outcome. We initially believed this would be the best model for us to determine if an applicant would be a "Good" or bad applicant.
 
-![MMTS Bank](Images/Logistics.png)
+![MMTS Bank](static/Images/Logistics.png)
 
 When we modeled the data using logistic regression, all of the test applicants were identified as good. The model did not perform as we had hoped. We later learned that although logistic regression models due indeed provide binary outcomes, they must be of numerical nature. In other words, logistic regression models cannot answer yes or no questions.
 
@@ -79,7 +79,7 @@ We tested the KNN model two times. The first time we tested the KNN model we use
 
 The second time we modelled the data we used a recommendation to equal the amount of data being fed into the model between Good and Bad applicants. We then sent into the model 2000 Good applicants and 2000 Bad applicants. This time the model did predict more Bad applicants and was closer to the actual Good/Bad applicants. 
 
-![MMTS Bank](Images/KNN1.png)
-![MMTS Bank](Images/KNN2.png)
-![MMTS Bank](Images/KNN3.png)
-![MMTS Bank](Images/KNN4.png)
+![MMTS Bank](static/Images/KNN1.png)
+![MMTS Bank](static/Images/KNN2.png)
+![MMTS Bank](static/Images/KNN3.png)
+![MMTS Bank](static/Images/KNN4.png)
