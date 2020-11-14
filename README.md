@@ -4,7 +4,8 @@ Team Members:
 - Tiffany Teasley: https://www.linkedin.com/in/tiffany-teasley/
 - Mabel Duran-Sanchez: https://www.linkedin.com/in/mabelduransanchez/
 - Melodie Vines: https://www.linkedin.com/in/melodiestaton/
- 
+
+Launch the app: https://shrouded-ocean-97702.herokuapp.com/
 
 ![MMTS Bank](Images/MMTSBankBanner.png)
 
