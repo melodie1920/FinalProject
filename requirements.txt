@@ -1,0 +1,5 @@
+flask
+gunicorn
+whitenoise
+flask_cors
+dnspython
