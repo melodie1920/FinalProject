@@ -4,3 +4,4 @@ whitenoise
 flask_cors
 dnspython
 joblib
+pandas
