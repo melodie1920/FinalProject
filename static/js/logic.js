@@ -355,7 +355,7 @@ function submitselect() {
 
     var data = [];
 
-    d3.request("http://127.0.0.1:5000/predict/" + gender + "/" + car + "/" + home + "/" + education + "/" + familyStatus + "/" + housing + "/" + email + "/" + incomeType + "/" + children + "/" + income + "/" + household + "/" + employment + "/" + ageBucket)
+    d3.request("/predict/" + gender + "/" + car + "/" + home + "/" + education + "/" + familyStatus + "/" + housing + "/" + email + "/" + incomeType + "/" + children + "/" + income + "/" + household + "/" + employment + "/" + ageBucket)
         .get(response => {
 
         data = JSON.parse(response.response);
