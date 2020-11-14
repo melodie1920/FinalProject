@@ -9,8 +9,7 @@ import pandas as pd
 knn_from_joblib = joblib.load('credit.pkl')
 
 # Create an instance of Flask
-app = Flask(__name__)
-
+app = Flask(__name__, static_url_path='', static_folder='static')
 CORS(app, resources={
     r"/*": {
         "origins": "*"
